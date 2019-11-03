@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<form action="/login.do" method="post">
+    用户名:<input type="text" name="username"><br>
+    密码:<input type="password" name="password"><br>
+    <input type="submit" value="submit">
+</form>
+<form name='form' action='/login.do' method='POST'>
+    <table>
+        <tr><td>登录名:</td><td><input type='text' name='username' value=''></td></tr>
+        <tr><td>密码:</td><td><input type='password' name='password'/></td></tr>
+        <tr><td colspan='2'><input name="submit" type="submit" value="提交"/></td></tr>
+<!--        Spring-security采用盗链机制，其中_csrf使用token标识和随机字符，每次访问页面都会随机生成，然后和服务器进行比较，成功可以访问，不成功不能访问。-->
+<!--        <input name="_csrf" type="hidden" value="198cd00c-52e1-43e4-a1f0-4f45f1b2418f" />-->
+    </table>
+</form>
+</body>
+</html>
